@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MOHIM DAS - Founder, Developer, Future AI Engineer. Discover the futuristic portfolio of a Silicon Valley builder and founder of CodeLX.">
+    <title>MOHIM DAS | Founder • Developer • Future AI Engineer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Dual Ring Custom Cursor -->
+    <div id="custom-cursor"></div>
+    <div id="custom-cursor-dot"></div>
+
+    <!-- Cinematic Entrance Loader -->
+    <div id="loader">
+        <div class="loader-bg-grid"></div>
+        <div class="loader-hud-container">
+            <div class="loader-scanner-ring"></div>
+            <div class="loader-scanner-ring ring-inner"></div>
+            <div class="loader-scanner-line"></div>
+            <div class="loader-percentage-container">
+                <span class="loader-label">INITIALIZING SYSTEM...</span>
+                <span id="loader-percentage">00%</span>
+            </div>
+            <div class="loader-logo-container">
+                <h1 class="loader-logo-text">MOHIM DAS</h1>
+                <p class="loader-sub-text">CODELX ARCHITECTURE v1.0.7</p>
+            </div>
+        </div>
+        <div class="loader-panel panel-left"></div>
+        <div class="loader-panel panel-right"></div>
+    </div>
+
+    <!-- Interactive WebGL Particles Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Floating HUD Header -->
+    <header class="hud-header">
+        <a href="#" class="hud-logo">
+            <span class="logo-accent">//</span> MOHIM DAS
+        </a>
+        
+        <!-- Animated Motivation Line -->
+        <div class="hud-nav-motivation">
+            <span class="motivation-cursor">></span>
+            <span id="motivation-ticker" class="motivation-ticker">"No connections. No funding. No shortcuts. Just a laptop, a dream, and an obsession to build something that matters." — MOHIM DAS // The future belongs to builders.</span>
+        </div>
+
+        <nav class="hud-nav">
+            <a href="#hero" class="nav-link active" title="SYS.HOME"><i class="fa-solid fa-house"></i></a>
+            <a href="#about" class="nav-link" title="SYS.BIO"><i class="fa-solid fa-user-astronaut"></i></a>
+            <a href="#globe-section" class="nav-link" title="SYS.LOC"><i class="fa-solid fa-earth-americas"></i></a>
+            <a href="#timeline" class="nav-link" title="SYS.LOG"><i class="fa-solid fa-list-check"></i></a>
+            <a href="#projects" class="nav-link" title="SYS.DEV"><i class="fa-solid fa-terminal"></i></a>
+            <a href="#skills" class="nav-link" title="SYS.CORE"><i class="fa-solid fa-microchip"></i></a>
+            <a href="#codelx" class="nav-link" title="SYS.STARTUP"><i class="fa-solid fa-rocket"></i></a>
+            <a href="#contact" class="nav-link" title="SYS.MSG"><i class="fa-solid fa-envelope"></i></a>
+        </nav>
+        <div class="hud-time-container">
+            <span id="hud-live-time">00:00:00 UTC</span>
+        </div>
+        <button class="mobile-hud-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="scroll-progress-indicator"></div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="content-wrapper">
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <!-- Full-Screen Cinematic Background Image with GSAP entrance zoom -->
+            <div class="hero-bg-image"></div>
+            
+            <div class="container hero-container">
+                <div class="hero-text-content">
+                    <div class="hud-badge animate-fade">SYSTEM ONLINE // MOHIM_DAS_</div>
+                    <h1 class="hero-title animate-title">MOHIM DAS</h1>
+                    <h2 class="hero-subtitle animate-subtitle">Founder • Developer • Future AI Engineer</h2>
+                    
+                    <!-- Dynamic Typing Text -->
+                    <div class="typing-container animate-fade">
+                        <span class="terminal-prompt">></span>
+                        <span id="typing-text" class="typing-text"></span>
+                        <span class="cursor-blink">|</span>
+                    </div>
+
+                    <!-- Bio Section -->
+                    <p class="hero-bio animate-fade">
+                        "No connections. No funding. No shortcuts. Just a laptop, a dream, and an obsession to build something that matters."
+                        <br><br>
+                        <strong>— MOHIM DAS</strong>
+                        <br><br>
+                        <span class="text-accent">// The future belongs to builders.</span>
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="hero-cta animate-fade">
+                        <a href="#timeline" class="btn btn-primary glow-btn">
+                            <span class="btn-text">View Journey</span>
+                            <span class="btn-glitch"></span>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span class="btn-text">Contact Me</span>
+                        </a>
+                        <a href="assets/profile.jpeg" download="Mohim_Das_CV" class="btn btn-tertiary">
+                            <i class="fa-solid fa-download"></i> Download CV
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual-content">
+
+                    <!-- Floating 3D Tech Elements -->
+                    <div class="floating-tech-elements">
+                        <div class="floating-element element-1" data-depth="0.2">
+                            <span class="elem-glow"></span>
+                            <span class="elem-text"><i class="fa-solid fa-brain"></i> AI</span>
+                        </div>
+                        <div class="floating-element element-2" data-depth="0.4">
+                            <span class="elem-glow"></span>
+                            <span class="elem-text"><i class="fa-solid fa-code"></i> Code</span>
+                        </div>
+                        <div class="floating-element element-3" data-depth="0.3">
+                            <span class="elem-glow"></span>
+                            <span class="elem-text"><i class="fa-solid fa-lightbulb"></i> Innovation</span>
+                        </div>
+                        <div class="floating-element element-4" data-depth="0.5">
+                            <span class="elem-glow"></span>
+                            <span class="elem-text"><i class="fa-solid fa-rocket"></i> Startup</span>
+                        </div>
+                        <div class="floating-element element-5" data-depth="0.1">
+                            <span class="elem-glow"></span>
+                            <span class="elem-text"><i class="fa-solid fa-microchip"></i> Future</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#about" class="scroll-down-indicator">
+                <span class="mouse-icon">
+                    <span class="mouse-wheel"></span>
+                </span>
+                <span class="scroll-text">SCROLL DOWN TO INITIATE</span>
+            </a>
+        </section>
+
+
+        <!-- ABOUT ME SECTION -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// IDENTITY VERIFICATION</span>
+                    <h2 class="section-title">ABOUT ME</h2>
+                </div>
+                
+                <div class="about-grid">
+                    <!-- Left: Core Info Card -->
+                    <div class="about-card glass-card info-card tilt-card">
+                        <div class="card-glow"></div>
+                        <div class="hud-box-header">
+                            <i class="fa-solid fa-user-astronaut card-icon"></i>
+                            <h3>BIOMETRICS & DOSSIER</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="dossier-list">
+                                <li>
+                                    <span class="dossier-label">FULL NAME:</span>
+                                    <span class="dossier-val">Mohim Das</span>
+                                </li>
+                                <li>
+                                    <span class="dossier-label">LOCATION:</span>
+                                    <span class="dossier-val">Kolkata, India <i class="fa-solid fa-location-dot accent-color"></i></span>
+                                </li>
+                                <li>
+                                    <span class="dossier-label">DESIGNATION:</span>
+                                    <span class="dossier-val">Young Tech Entrepreneur</span>
+                                </li>
+                                <li>
+                                    <span class="dossier-label">EDUCATION:</span>
+                                    <span class="dossier-val">B.Tech Computer Science Engineering</span>
+                                </li>
+                                <li>
+                                    <span class="dossier-label">INSTITUTION:</span>
+                                    <span class="dossier-val">Swami Vivekananda Institute of Science and Technology</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Right: Vision & Strategy Card -->
+                    <div class="about-card glass-card vision-card tilt-card">
+                        <div class="card-glow"></div>
+                        <div class="hud-box-header">
+                            <i class="fa-solid fa-eye card-icon"></i>
+                            <h3>VISION & MISSION Statement</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="vision-quote">
+                                "I am building technologies that can empower millions of people through education, AI, automation, and digital innovation."
+                            </div>
+                            <div class="vision-graph-container">
+                                <div class="hud-grid-overlay"></div>
+                                <div class="vision-bar-chart">
+                                    <div class="v-bar-group">
+                                        <span class="v-label">EDUCATION</span>
+                                        <div class="v-bar"><span class="v-fill" style="width: 90%;"></span></div>
+                                    </div>
+                                    <div class="v-bar-group">
+                                        <span class="v-label">AI DEPLOYMENT</span>
+                                        <div class="v-bar"><span class="v-fill" style="width: 85%;"></span></div>
+                                    </div>
+                                    <div class="v-bar-group">
+                                        <span class="v-label">AUTOMATION</span>
+                                        <div class="v-bar"><span class="v-fill" style="width: 95%;"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- INTERACTIVE 3D MAP SECTION -->
+        <section id="globe-section" class="globe-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">// GLOBAL TELEMETRY</span>
+                    <h2 class="section-title">CORE HUB & GLOBAL CONNECTIONS</h2>
+                </div>
+                
+                <div class="globe-container-wrapper glass-card">
+                    <div class="hud-corners"></div>
+                    <div class="hud-grid-overlay"></div>
+                    
+                    <!-- Three.js Canvas Container -->
+                    <div id="canvas3d-container"></div>
+
+                    <!-- Location Hover Information Details -->
+                    <div class="globe-info-hud">
+                        <div class="globe-hud-header">
+                            <span class="pulse-dot"></span>
+                            <h4>KOLKATA CORE HUB [IN]</h4>
+                        </div>
+                        <p class="globe-hud-text">"Currently Building The Future From Kolkata 🇮🇳"</p>
+                        <div class="globe-hud-stats">
+                            <span class="stat-span"><i class="fa-solid fa-wifi"></i> 99.9% Up</span>
+                            <span class="stat-span"><i class="fa-solid fa-satellite"></i> 5 Nodes Connected</span>
+                        </div>
+                        <div class="flight-paths-list">
+                            <div class="path-item">KOLKATA <i class="fa-solid fa-arrow-right"></i> Silicon Valley (US)</div>
+                            <div class="path-item">KOLKATA <i class="fa-solid fa-arrow-right"></i> London (UK)</div>
+                            <div class="path-item">KOLKATA <i class="fa-solid fa-arrow-right"></i> Singapore (SG)</div>
+                            <div class="path-item">KOLKATA <i class="fa-solid fa-arrow-right"></i> Dubai (UAE)</div>
+                            <div class="path-item">KOLKATA <i class="fa-solid fa-arrow-right"></i> Tokyo (JP)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- TIMELINE SECTION -->
+        <section id="timeline" class="timeline-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// ARCHIVAL TIME LOGS</span>
+                    <h2 class="section-title">THE JOURNEY TIMELINE</h2>
+                </div>
+                
+                <div class="timeline-container">
+                    <div class="timeline-line">
+                        <div class="timeline-progress-bar"></div>
+                    </div>
+                    
+                    <!-- 2023 -->
+                    <div class="timeline-item left animate-timeline">
+                        <div class="timeline-dot-outer">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-card glass-card">
+                            <div class="card-glow"></div>
+                            <div class="timeline-header">
+                                <span class="timeline-year">2023</span>
+                                <span class="timeline-tag">ACADEMICS</span>
+                            </div>
+                            <h3>Secondary Examination</h3>
+                            <p>Completed secondary school certification with high grades, scoring 83% and demonstrating a strong foundation in science and mathematics.</p>
+                            <div class="timeline-metrics">
+                                <div class="metric-circle" data-target="83">
+                                    <svg class="metric-svg" viewBox="0 0 36 36">
+                                        <path class="metric-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="metric-progress" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    </svg>
+                                    <div class="metric-val">83%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2025 -->
+                    <div class="timeline-item right animate-timeline">
+                        <div class="timeline-dot-outer">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-card glass-card">
+                            <div class="card-glow"></div>
+                            <div class="timeline-header">
+                                <span class="timeline-year">2025</span>
+                                <span class="timeline-tag">PRE-UNIVERSITY</span>
+                            </div>
+                            <h3>Higher Secondary Examination</h3>
+                            <p>Completed higher secondary education in the science stream with a concentration on mathematics, physics, and computer science, scoring 74.2%.</p>
+                            <div class="timeline-metrics">
+                                <div class="metric-circle" data-target="74.2">
+                                    <svg class="metric-svg" viewBox="0 0 36 36">
+                                        <path class="metric-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="metric-progress" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    </svg>
+                                    <div class="metric-val">74.2%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2025-26 -->
+                    <div class="timeline-item left animate-timeline">
+                        <div class="timeline-dot-outer">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-card glass-card">
+                            <div class="card-glow"></div>
+                            <div class="timeline-header">
+                                <span class="timeline-year">2025-26</span>
+                                <span class="timeline-tag">HIGHER EDUCATION</span>
+                            </div>
+                            <h3>B.Tech CSE (Undergrad)</h3>
+                            <p>Admitted to the Bachelor of Technology program in Computer Science Engineering at Swami Vivekananda Institute of Science and Technology, starting deep dives into algorithms and complex systems.</p>
+                            <div class="timeline-metrics">
+                                <div class="metric-stat">
+                                    <div class="metric-stat-num">B.Tech</div>
+                                    <div class="metric-stat-label">CSE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Present -->
+                    <div class="timeline-item right animate-timeline">
+                        <div class="timeline-dot-outer">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-card glass-card active-card">
+                            <div class="card-glow"></div>
+                            <div class="timeline-header">
+                                <span class="timeline-year active-year">PRESENT</span>
+                                <span class="timeline-tag active-tag">FOUNDERSHIP</span>
+                            </div>
+                            <h3>Founder of CodeLX</h3>
+                            <p>Creating CodeLX, an educational ecosystem offering courses, software tools, live coding playgrounds, and AI agents. Building the platform to empower modern learners.</p>
+                            <div class="timeline-metrics">
+                                <div class="metric-stat">
+                                    <div class="metric-stat-num">1.5k+</div>
+                                    <div class="metric-stat-label">Active Users</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Future -->
+                    <div class="timeline-item left animate-timeline">
+                        <div class="timeline-dot-outer">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-card glass-card future-card">
+                            <div class="card-glow"></div>
+                            <div class="timeline-header">
+                                <span class="timeline-year">FUTURE</span>
+                                <span class="timeline-tag">GLOBAL VISION</span>
+                            </div>
+                            <h3>Building Global Tech Products</h3>
+                            <p>Scaling CodeLX internationally, launching AI automation agents globally, and establishing world-class technologies to disrupt education and productivity sectors.</p>
+                            <div class="timeline-metrics">
+                                <div class="metric-stat">
+                                    <div class="metric-stat-num"><i class="fa-solid fa-earth-americas"></i></div>
+                                    <div class="metric-stat-label">Global Impact</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// PRODUCT SHOWCASE</span>
+                    <h2 class="section-title">FEATURED PROJECTS</h2>
+                </div>
+                
+                <div class="projects-grid">
+                    
+                    <!-- Project 1 -->
+                    <div class="project-card glass-card tilt-card">
+                        <div class="project-card-inner">
+                            <div class="card-glow"></div>
+                            <div class="project-visual">
+                                <div class="project-overlay">
+                                    <div class="project-tech-tags">
+                                        <span>MERN</span>
+                                        <span>Node.js</span>
+                                        <span>Razorpay</span>
+                                        <span>CSS3</span>
+                                    </div>
+                                    <div class="preview-btn-container">
+                                        <a href="#" class="btn btn-secondary sm-btn">
+                                            Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="project-img-placeholder">
+                                    <div class="canvas-project-particles" data-type="1"></div>
+                                    <i class="fa-solid fa-graduation-cap proj-icon"></i>
+                                    <div class="proj-grid-overlay"></div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <span class="project-num">PROJECT_01 //</span>
+                                <h3 class="project-title">Online Education Platform</h3>
+                                <p class="project-description">Affordable Learning Management System delivering high-quality courses under ₹299. Features modern course players, payment gateways, and student dashboards.</p>
+                                
+                                <div class="project-stats">
+                                    <div class="p-stat">
+                                        <span class="p-stat-val">₹299</span>
+                                        <span class="p-stat-lbl">Price Cap</span>
+                                    </div>
+                                    <div class="p-stat">
+                                        <span class="p-stat-val">MERN</span>
+                                        <span class="p-stat-lbl">Core Stack</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-card tilt-card">
+                        <div class="project-card-inner">
+                            <div class="card-glow"></div>
+                            <div class="project-visual">
+                                <div class="project-overlay">
+                                    <div class="project-tech-tags">
+                                        <span>WebRTC</span>
+                                        <span>Node.js</span>
+                                        <span>AWS</span>
+                                        <span>MongoDB</span>
+                                    </div>
+                                    <div class="preview-btn-container">
+                                        <a href="#" class="btn btn-secondary sm-btn">
+                                            Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="project-img-placeholder">
+                                    <div class="canvas-project-particles" data-type="2"></div>
+                                    <i class="fa-solid fa-robot proj-icon"></i>
+                                    <div class="proj-grid-overlay"></div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <span class="project-num">PROJECT_02 //</span>
+                                <h3 class="project-title">AI Workshop & Training Hub</h3>
+                                <p class="project-description">Interactive training ecosystem featuring WebRTC streaming, automated attendance scanning, digital coding playground, and automated PDF delivery logs.</p>
+                                
+                                <div class="project-stats">
+                                    <div class="p-stat">
+                                        <span class="p-stat-val">RTC</span>
+                                        <span class="p-stat-lbl">Streaming</span>
+                                    </div>
+                                    <div class="p-stat">
+                                        <span class="p-stat-val">Node</span>
+                                        <span class="p-stat-lbl">AWS Cloud</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass-card tilt-card">
+                        <div class="project-card-inner">
+                            <div class="card-glow"></div>
+                            <div class="project-visual">
+                                <div class="project-overlay">
+                                    <div class="project-tech-tags">
+                                        <span>React</span>
+                                        <span>Firebase</span>
+                                        <span>ChartJS</span>
+                                        <span>Framer</span>
+                                    </div>
+                                    <div class="preview-btn-container">
+                                        <a href="#" class="btn btn-secondary sm-btn">
+                                            Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="project-img-placeholder">
+                                    <div class="canvas-project-particles" data-type="3"></div>
+                                    <i class="fa-solid fa-wallet proj-icon"></i>
+                                    <div class="proj-grid-overlay"></div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <span class="project-num">PROJECT_03 //</span>
+                                <h3 class="project-title">Smart Finance Tracker</h3>
+                                <p class="project-description">Real-time digital finance tracker with analytical dashboards, automated expense categorization, investment forecasting, and secure Firebase synchronization.</p>
+                                
+                                <div class="project-stats">
+                                    <div class="p-stat">
+                                        <span class="p-stat-val">React</span>
+                                        <span class="p-stat-lbl">Framework</span>
+                                    </div>
+                                    <div class="p-stat">
+                                        <span class="p-stat-val">99.8%</span>
+                                        <span class="p-stat-lbl">Sync Accuracy</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ACHIEVEMENTS SECTION -->
+        <section id="achievements" class="achievements-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">// SERVICE HONORS</span>
+                    <h2 class="section-title">HONORS & ACHIEVEMENTS</h2>
+                </div>
+                
+                <div class="achievements-grid">
+                    
+                    <!-- Academic Excellence -->
+                    <div class="achievement-badge glass-card tilt-card">
+                        <div class="badge-glow"></div>
+                        <div class="badge-icon-container">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3>Academic Excellence</h3>
+                        <p>Consistently high performance throughout school and tech studies, specializing in core sciences.</p>
+                    </div>
+
+                    <!-- District Youth Parliament Champion -->
+                    <div class="achievement-badge glass-card tilt-card">
+                        <div class="badge-glow"></div>
+                        <div class="badge-icon-container">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <h3>Youth Parliament Champion</h3>
+                        <p>Honored as the District Youth Parliament Champion, demonstrating exceptional public speaking and leadership.</p>
+                    </div>
+
+                    <!-- Startup Founder -->
+                    <div class="achievement-badge glass-card tilt-card">
+                        <div class="badge-glow"></div>
+                        <div class="badge-icon-container">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <h3>Startup Founder</h3>
+                        <p>Launched CodeLX, aiming to create an affordable and futuristic ecosystem for developers and learners.</p>
+                    </div>
+
+                    <!-- Technical Lead -->
+                    <div class="achievement-badge glass-card tilt-card">
+                        <div class="badge-glow"></div>
+                        <div class="badge-icon-container">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3>Technical Lead</h3>
+                        <p>Spearheaded system architecture, API setups, and technical developments across project pipelines.</p>
+                    </div>
+
+                    <!-- Smart India Hackathon Participant -->
+                    <div class="achievement-badge glass-card tilt-card">
+                        <div class="badge-glow"></div>
+                        <div class="badge-icon-container">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <h3>SIH Participant</h3>
+                        <p>Competed in Smart India Hackathon, designing automated solutions for real-world government problems.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// MODULE CAPABILITIES</span>
+                    <h2 class="section-title">TECHNICAL & SOFT SKILLS</h2>
+                </div>
+                
+                <div class="skills-grid">
+                    
+                    <!-- Programming Skills -->
+                    <div class="skills-card glass-card">
+                        <div class="card-glow"></div>
+                        <h3>PROGRAMMING STACK</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>C / C++</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar"><span class="skill-fill" style="width: 85%;"></span></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Python</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar"><span class="skill-fill" style="width: 90%;"></span></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>JavaScript & React</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar"><span class="skill-fill" style="width: 95%;"></span></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>HTML5 & CSS3</span>
+                                    <span>98%</span>
+                                </div>
+                                <div class="skill-bar"><span class="skill-fill" style="width: 98%;"></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools Skills -->
+                    <div class="skills-card glass-card">
+                        <div class="card-glow"></div>
+                        <h3>DEVELOPER TOOLS</h3>
+                        <div class="tools-grid">
+                            <div class="tool-badge"><i class="fa-brands fa-github"></i> GitHub</div>
+                            <div class="tool-badge"><i class="fa-solid fa-code"></i> VS Code</div>
+                            <div class="tool-badge"><i class="fa-solid fa-palette"></i> Canva</div>
+                            <div class="tool-badge"><i class="fa-solid fa-bezier-curve"></i> Photoshop</div>
+                            <div class="tool-badge"><i class="fa-solid fa-robot"></i> ChatGPT</div>
+                            <div class="tool-badge"><i class="fa-solid fa-bolt"></i> Claude</div>
+                            <div class="tool-badge"><i class="fa-solid fa-gem"></i> Gemini</div>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="skills-card glass-card">
+                        <div class="card-glow"></div>
+                        <h3>SOFT SKILLS & LEADERSHIP</h3>
+                        <div class="skills-circle-grid">
+                            
+                            <div class="skill-circle-container">
+                                <svg class="skill-circle-svg" viewBox="0 0 36 36">
+                                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="circle-fill" stroke-dasharray="95, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                </svg>
+                                <div class="circle-percentage">95%</div>
+                                <div class="circle-label">Leadership</div>
+                            </div>
+
+                            <div class="skill-circle-container">
+                                <svg class="skill-circle-svg" viewBox="0 0 36 36">
+                                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="circle-fill" stroke-dasharray="90, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                </svg>
+                                <div class="circle-percentage">90%</div>
+                                <div class="circle-label">Teamwork</div>
+                            </div>
+
+                            <div class="skill-circle-container">
+                                <svg class="skill-circle-svg" viewBox="0 0 36 36">
+                                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="circle-fill" stroke-dasharray="95, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                </svg>
+                                <div class="circle-percentage">95%</div>
+                                <div class="circle-label">Speech</div>
+                            </div>
+
+                            <div class="skill-circle-container">
+                                <svg class="skill-circle-svg" viewBox="0 0 36 36">
+                                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="circle-fill" stroke-dasharray="88, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                </svg>
+                                <div class="circle-percentage">88%</div>
+                                <div class="circle-label">Adaptability</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CODELX SECTION -->
+        <section id="codelx" class="codelx-section">
+            <div class="container">
+                <div class="codelx-grid">
+                    <div class="codelx-info-column">
+                        <div class="hud-badge">// INCUBATION MODULE</div>
+                        <h2 class="codelx-title">BUILDING CODELX</h2>
+                        <h3 class="codelx-subtitle">"Creating an ecosystem where education, AI, productivity, innovation, and opportunity exist in one platform."</h3>
+                        <p class="codelx-text">CodeLX is a forward-thinking digital initiative designed to dismantle conventional education models. Under Mohim's leadership, it provides standard libraries, online workshops, active workspaces, and high-performance training tracks at price points accessible to absolute beginners.</p>
+                        
+                        <div class="codelx-stats-grid">
+                            <div class="codelx-stat-box">
+                                <span class="stat-num">₹299</span>
+                                <span class="stat-lbl">Price Cap</span>
+                            </div>
+                            <div class="codelx-stat-box">
+                                <span class="stat-num">MERN</span>
+                                <span class="stat-lbl">Technology</span>
+                            </div>
+                            <div class="codelx-stat-box">
+                                <span class="stat-num">AI</span>
+                                <span class="stat-lbl">Automation</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="codelx-visual-column">
+                        <!-- Roadmap Animation -->
+                        <div class="roadmap-card glass-card">
+                            <div class="hud-corners"></div>
+                            <div class="hud-grid-overlay"></div>
+                            <h3>CODELX ROADMAP 2026</h3>
+                            
+                            <div class="roadmap-wrapper">
+                                <div class="roadmap-track">
+                                    <div class="roadmap-fill"></div>
+                                </div>
+                                
+                                <div class="roadmap-node current-node">
+                                    <div class="node-dot"><span class="pulse-ring"></span></div>
+                                    <div class="node-content">
+                                        <h4>PHASE 01: CORE ARCHITECTURE</h4>
+                                        <p>LMS development, custom payment models, course platform.</p>
+                                        <span class="node-status text-accent">ACTIVE</span>
+                                    </div>
+                                </div>
+
+                                <div class="roadmap-node">
+                                    <div class="node-dot"></div>
+                                    <div class="node-content">
+                                        <h4>PHASE 02: STREAMING & playground</h4>
+                                        <p>WebRTC workshop hub, custom code compilers, automated notes generator.</p>
+                                        <span class="node-status">UP NEXT</span>
+                                    </div>
+                                </div>
+
+                                <div class="roadmap-node">
+                                    <div class="node-dot"></div>
+                                    <div class="node-content">
+                                        <h4>PHASE 03: INTEGRATED AI AGENTS</h4>
+                                        <p>Deploying AI agents to tutor developers and automate student grading.</p>
+                                        <span class="node-status">SCHED</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CONTACT SECTION & SOCIALS -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">// SECURE TRANSMISSION</span>
+                    <h2 class="section-title">COMMUNICATION UPLINK</h2>
+                </div>
+                
+                <div class="contact-grid">
+                    <!-- Left: Form -->
+                    <div class="contact-form-container glass-card">
+                        <div class="hud-corners"></div>
+                        <div class="hud-grid-overlay"></div>
+                        <h3>SEND AN ENCRYPTED MESSAGE</h3>
+                        
+                        <form id="hud-contact-form" class="contact-form" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">NAME / IDENTIFIER</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">RETURN EMAIL</label>
+                                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">MESSAGE SUBJECT</label>
+                                    <input type="text" id="subject" name="subject" required placeholder="System Integration">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">ENCRYPTED PAYLOAD</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Type your transmission here..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block glow-btn">
+                                <span class="btn-text">TRANSMIT PACKETS</span>
+                                <span class="btn-glitch"></span>
+                            </button>
+                        </form>
+                        
+                        <!-- Success Popup overlay -->
+                        <div class="form-success-overlay">
+                            <i class="fa-solid fa-circle-check success-icon"></i>
+                            <h4>TRANSMISSION SUCCESSFUL</h4>
+                            <p>Data packets routed. Awaiting response log.</p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Info & 3D floating Social Icons -->
+                    <div class="contact-info-container">
+                        <div class="contact-text-box glass-card">
+                            <div class="hud-box-header">
+                                <i class="fa-solid fa-satellite-dish card-icon"></i>
+                                <h3>UPLINK TERMINAL</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Open for opportunities, startup partnerships, guest workshops, and future Google recruitment connections.</p>
+                                
+                                <ul class="contact-info-list">
+                                    <li>
+                                        <i class="fa-solid fa-location-dot accent-color"></i>
+                                        <span>Kolkata, India 🇮🇳</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 3D Floating Social Icons -->
+                        <div class="social-3d-grid">
+                            <a href="https://www.instagram.com/mohim_zero7" target="_blank" rel="noopener noreferrer" class="social-icon-box glass-card tilt-card" title="Instagram">
+                                <div class="badge-glow"></div>
+                                <i class="fa-brands fa-instagram"></i>
+                                <span>INSTAGRAM</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/mohim-das-685226324" target="_blank" rel="noopener noreferrer" class="social-icon-box glass-card tilt-card" title="LinkedIn">
+                                <div class="badge-glow"></div>
+                                <i class="fa-brands fa-linkedin-in"></i>
+                                <span>LINKEDIN</span>
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon-box glass-card tilt-card" title="YouTube">
+                                <div class="badge-glow"></div>
+                                <i class="fa-brands fa-youtube"></i>
+                                <span>YOUTUBE</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- OUTRO / CINEMATIC ENDING SECTION -->
+        <section id="outro" class="outro-section">
+            <div class="container text-center">
+                <div class="hud-badge animate-fade">UPLINK CLOSING // ARCHIVE_07</div>
+                
+                <h2 class="outro-quote">
+                    "A coder who was rejected everywhere until he decided to paint the whole world"
+                </h2>
+                
+                <div class="outro-author">
+                    <h3>— MOHIM DAS</h3>
+                </div>
+
+                <!-- Particle canvas container for CodeLX logo reveal -->
+                <div class="logo-ending-canvas-container">
+                    <canvas id="outro-logo-canvas"></canvas>
+                </div>
+
+                <div class="cinematic-msg text-accent">
+                    "The Journey Has Just Begun."
+                </div>
+            </div>
+            
+            <footer class="hud-footer">
+                <p>&copy; 2026 MOHIM DAS. All rights reserved. // SECURED BY CODELX PROTOCOLS</p>
+            </footer>
+        </section>
+
+    </main>
+
+    <!-- CDN Libraries -->
+    <!-- Three.js Core Engine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- GSAP for core animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Main Logic Script -->
+    <script src="app.js"></script>
+</body>
+</html>
